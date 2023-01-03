@@ -74,9 +74,9 @@ void AAvciCaseCharacter::BeginPlay()
 	SetUpRocketLauncher();
 
 
-	//OnTakeAnyDamage.AddDynamic(this, &AAvciCaseCharacter::OnTakeRadialDamage);
-	//HealthComponent->OnDeath.AddDynamic(this, &AAvciCaseCharacter::OnDeath);
-	//HealthComponent->OnHealthChanged.AddDynamic(this, &AAvciCaseCharacter::OnHealthChanged);
+	OnTakeAnyDamage.AddDynamic(this, &AAvciCaseCharacter::OnTakeRadialDamage);
+	HealthComponent->OnDeath.AddDynamic(this, &AAvciCaseCharacter::OnDeath);
+	HealthComponent->OnHealthChanged.AddDynamic(this, &AAvciCaseCharacter::OnHealthChanged);
 }
 
 //////////////////////////////////////////////////////////////////////////

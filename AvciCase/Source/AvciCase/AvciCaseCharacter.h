@@ -77,8 +77,13 @@ protected:
 
 	void CastGuidanceRay();
 
+	UFUNCTION()
 	virtual void OnDeath() override;
+
+	UFUNCTION()
 	virtual void OnHealthChanged() override;
+
+	UFUNCTION()
 	virtual void OnTakeRadialDamage(AActor* DamagedActor, float Damage, const UDamageType* DamageType,
 	                                AController* InstigatedBy, AActor* DamageCauser) override;
 
